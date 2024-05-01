@@ -3,6 +3,7 @@ import React from 'react'
 interface User{
     id: number;
     name: string;
+    email: string;
 }
 
 const UsersPage = async () => {
@@ -12,10 +13,20 @@ const UsersPage = async () => {
   return (
     <div>
       <h1>Users:</h1>
-      <ul>
-        <p>{new Date().toLocaleTimeString()}</p>
-        {users.map(user => <li key={user.id}>{user.name}</li>)}
-      </ul>
+      <table className='table table-boarderd'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        {users.map(user => <tr key={user.id}>
+            <th>{user.name}</th>
+            <th>{user.email}</th>
+        </tr>)}
+        </tbody>
+      </table>
     </div>
   )
 }
