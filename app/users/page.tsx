@@ -13,6 +13,7 @@ const UsersPage = async () => {
     <div>
       <h1>Users:</h1>
       <ul>
+        <p>{new Date().toLocaleTimeString()}</p>
         {users.map(user => <li key={user.id}>{user.name}</li>)}
       </ul>
     </div>
