@@ -1,3 +1,5 @@
+import { error } from "console";
+import { request } from "http";
 import { NextRequest, NextResponse } from "next/server";
 
 export function GET(request: NextRequest){
@@ -14,3 +16,4 @@ export async function POST(request: NextRequest){
     }
     return NextResponse.json({id: 1, name: body.name}, {status: 201});
 }
+
