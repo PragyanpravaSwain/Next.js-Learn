@@ -12,3 +12,5 @@ export function GET(request: NextRequest, {params}: {params: {id: number}}){
     return NextResponse.json({id: 1, name: 'Mosh'});
 }
 
+
+
